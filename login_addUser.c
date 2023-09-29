@@ -41,7 +41,7 @@ int login_or_AddUser(int num)
 		}
 		else if (num == 2)
 		{
-			i = NewUser(&head,name, password);
+			i = NewUser(&head, name, password);
 			if (i == 1)
 			{
 				printf("New user add successfully\n");
@@ -72,6 +72,13 @@ int login_or_AddUser(int num)
 
 
 
+/**
+ * NweUset - function that adds a new user
+ * @name: name of the user
+ * @head: points to the head node
+ * @password: password
+ * Return: return 1 when success and 0 when memory fails
+ */
 int NewUser(User **head, const char *name, const char *password)
 {
 	User *new_user;
@@ -100,6 +107,7 @@ int NewUser(User **head, const char *name, const char *password)
 }
 
 
+
 /**
  * login - function that creates login for user
  * &head: points to the head node
@@ -125,6 +133,13 @@ int login(User **head, const char *username, const char *password)
 }
 
 
+
+/**
+ * printusers - function that prints available users
+ * @head: points to the head node
+ * Return: returns the number of users
+ *
+ */
 size_t printusers(User *head)
 {
 	User *current = head;
